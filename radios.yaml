@@ -1,0 +1,214 @@
+- name: I Love Radio
+  description: >-
+    Haupt I Love Radio. Hier sind alle Genres vertreten
+  url: https://streams.ilovemusic.de/iloveradio1.mp3
+
+- name: Dance
+  description: >-
+    I Love to Dance (Ein Untersender von ILoveRadio) streamt hauptsächlich Elektronische Tanzmusik
+  url: https://streams.ilovemusic.de/iloveradio2.mp3
+
+- name: Bass
+  description: >-
+    I Love Bass (Untersender von ILoveRadio) streamt hauptsächlich Bass House
+  url: https://streams.ilovemusic.de/iloveradio29.mp3
+
+- name: Chill
+  description: >-
+    I Love Chill (Untersender von ILoveRadio) streamt Chill House
+  url: https://streams.ilovemusic.de/iloveradio10.mp3
+
+- name: Mashup
+  description: >-
+    I Love Radio: Mashup
+  url: https://streams.ilovemusic.de/iloveradio5.mp3
+
+- name: Party Hard
+  description: >-
+    I Love Radio: Party Hard
+  url: https://streams.ilovemusic.de/iloveradio14.mp3
+
+- name: From Mars
+  description: >-
+    I Love Radio: Radio from Mars
+  url: https://streams.ilovemusic.de/iloveradio28.mp3
+
+- name: Sugar
+  description: >-
+    I Love Radio: Sugar Radio
+  url: https://streams.ilovemusic.de/iloveradio18.mp3
+
+- name: 90s
+  description: >-
+    I Love Radio: Ninetees
+  url: https://streams.ilovemusic.de/iloveradio24.mp3
+
+- name: Sun
+  description: >-
+    I Love Radio: The Sun
+  url: https://streams.ilovemusic.de/iloveradio15.mp3
+
+- name: Top 100
+  description: >-
+    I Love Radio: Top 100
+  url: https://streams.ilovemusic.de/iloveradio9.mp3
+
+- name: US Rap
+  description: >-
+    I Love Radio: US Rap
+  url: https://streams.ilovemusic.de/iloveradio13.mp3
+
+- name: Workout
+  description: >-
+    I Love Radio: Workout
+  url: https://streams.ilovemusic.de/iloveradio23.mp3
+
+- name: X-Mas
+  description: >-
+    I Love Radio: X-Mas
+  url: https://streams.ilovemusic.de/iloveradio8.mp3
+
+- name: Rock
+  description: >-
+    I Love Radio: Radio Rock
+  url: https://streams.ilovemusic.de/iloveradio4.mp3
+
+- name: New Pop
+  description: >-
+    I Love Radio: New Pop
+  url: https://streams.ilovemusic.de/iloveradio11.mp3
+
+- name: MALLE
+  description: >-
+    I Love Radio: Malle
+  url: https://streams.ilovemusic.de/iloveradio25.mp3
+
+- name: Mainstage
+  description: >-
+    I Love Radio: Mainstage
+  url: https://streams.ilovemusic.de/iloveradio22.mp3
+
+- name: Hits History
+  description: >-
+    I Love Radio: Hits History
+  url: https://streams.ilovemusic.de/iloveradio12.mp3
+
+- name: Neue Hits
+  description: >-
+    I Love Radio: Hits 2024
+  url: https://streams.ilovemusic.de/iloveradio109.mp3
+
+- name: HipHop History
+  description: >-
+    I Love Radio: Hip Hop History
+  url: https://streams.ilovemusic.de/iloveradio27.mp3
+
+- name: HipHop aktuell
+  description: >-
+    I Love Radio: Hip Hop 2024
+  url: https://streams.ilovemusic.de/iloveradio35.mp3
+
+- name: Hip Hop
+  description: >-
+    I Love Radio: Hip Hop
+  url: https://streams.ilovemusic.de/iloveradio3.mp3
+
+- name: Hardstyle
+  description: >-
+    I Love Radio: Hardstyle
+  url: https://streams.ilovemusic.de/iloveradio21.mp3
+
+- name: Greatest Hits
+  description: >-
+    I Love Radio: Greatest Hits
+  url: https://streams.ilovemusic.de/iloveradio16.mp3
+
+- name: Deutschrap First
+  description: >-
+    I Love Radio: Deutschrap First!
+  url: https://streams.ilovemusic.de/iloveradio104.mp3
+
+- name: Deutschrap beste
+  description: >-
+    I Love Radio: Deutschrap Beste
+  url: https://streams.ilovemusic.de/iloveradio6.mp3
+
+- name: Dance History
+  description: >-
+    I Love Radio: Dance History
+  url: https://streams.ilovemusic.de/iloveradio26.mp3
+
+- name: Dance First
+  description: >-
+    I Love Radio: Dance First!
+  url: https://streams.ilovemusic.de/iloveradio103.mp3
+
+- name: Dance aktuell
+  description: >-
+    I Love Radio: Dance 2024
+  url: https://streams.ilovemusic.de/iloveradio36.mp3
+
+- name: Chillhop
+  description: >-
+    I Love Radio: Chillhop
+  url: https://streams.ilovemusic.de/iloveradio17.mp3
+
+- name: Bass by HBZ
+  description: >-
+    I Love Radio: Bass by HBZ
+  url: https://streams.ilovemusic.de/iloveradio29.mp3
+
+- name: 2010+ Throwbacks
+  description: >-
+    I Love Radio: 2010+ Throwbacks
+  url: https://streams.ilovemusic.de/iloveradio38.mp3
+
+- name: 2000+ Throwbacks
+  description: >-
+    I Love Radio: 2000+ Throwbacks
+  url: https://streams.ilovemusic.de/iloveradio37.mp3
+
+- name: 1Live
+  description: >-
+    1Live
+  url: https://d111.rndfnk.com/ard/wdr/1live/live/mp3/128/stream.mp3?aggregator=radio-de&cid=01FBRZTS1K1TCD4KA2YZ1ND8X3&sid=2axWGngs5JmwxXQAIv9MUHwpxxx&token=27KSWTsIqRH5QB5Q4t5PyBfYYUx9RjroPJX32xQO8z4&tvf=K7AZEyRhqhdkMTExLnJuZGZuay5jb20
+
+- name: 1Live Diggi
+  description: >-
+    1Live Diggi ist ein Sender für neuere Lieder welche auf 1Live nur eher selten abgespielt werden
+  url: https://d141.rndfnk.com/ard/wdr/1live/diggi/mp3/128/stream.mp3?aggregator=radio-de&cid=01FBS02KK2TSYGZSY19X8ZJ3RK&sid=2axZpU3GxBbDnDTuDKPLk1LEv1m&token=DDaxNWYb1JH_M_yTNLoIpqip0mDnZY8NvMQz66D7atE&tvf=7w9pO71iqhdkMTQxLnJuZGZuay5jb20
+
+- name: GayFM
+  description: >-
+    Maiks Lieblingssender
+  url: https://icepool.silvacast.com/GAYFM.mp3
+
+- name: Deutschrock
+  description: >-
+    ROCK ANTENNE: Deutschrock
+  url: https://s6-webradio.rockantenne.de/deutschrock/stream/mp3
+
+- name: Sunshine Live
+  description: >-
+    SUNSHINE Live
+  url: https://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053
+
+- name: Top 100 Station
+  description: >-
+    Top 100 Station: EDM
+  url: https://rautemusik-de-hz-fal-stream18.radiohost.de/top100station_mp3-192
+
+- name: HouseTime
+  description: >-
+    HouseTime: Dupstep
+  url: https://listen.housetime.fm/tunein-mp3-pls
+
+- name: Techno4Ever
+  description: >-
+    Techno4Ever.FM
+  url: https://rautemusik-de-hz-fal-stream17.radiohost.de/rautemusik-techno_mp3-192
+
+- name: Bollerwagen
+  description: >-
+    Radio Bollerwagen: Schlagersender
+  url: https://ffn-stream21.radiohost.de/radiobollerwagen_mp3-192

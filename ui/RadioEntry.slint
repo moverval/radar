@@ -1,0 +1,78 @@
+import "./fonts/Roboto/RobotoCondensed-Medium.ttf";
+import { VerticalBox } from "std-widgets.slint";
+
+export component RadioEntry inherits Rectangle {
+    in property <string> title: "Radio";
+    in property <string> url: "https://voulter.com";
+    callback on-play;
+
+    height: 50px;
+    background: ta.has-hover ? #404040 : #303030;
+    border-width: 1px;
+
+    animate background {
+        duration: 150ms;
+        easing: ease-in-out;
+    }
+
+    ta := TouchArea {
+        HorizontalLayout {
+            alignment: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+            min-height: 0;
+
+            VerticalLayout {
+                alignment: center;
+
+                Text {
+                    text: title;
+                    font-family: "Arial";
+                    font-size: 20px;
+                    color: white;
+                    overflow: elide;
+                }
+
+                Text {
+                    text: url;
+                    font-family: "Arial";
+                    font-size: 10px;
+                    color: gray;
+                    overflow: elide;
+                }
+            }
+
+            VerticalLayout {
+                padding: 10px;
+                alignment: center;
+                Rectangle {
+                    
+                    play-ta := TouchArea {
+                        mouse-cursor: pointer;
+
+                        Rectangle {
+                            VerticalBox {
+                                padding: 5px;
+
+                                Image {
+                                    width: 15px;
+                                    source: @image-url("icons/play.svg");
+                                    colorize: play-ta.has-hover ? #A0A0A0 : white;
+                                    
+                                    animate colorize {
+                                         duration: 200ms;
+                                         easing: ease;
+                                    }
+                                }
+                            }
+                        }
+
+                        clicked => {
+                            on-play();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

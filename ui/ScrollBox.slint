@@ -1,0 +1,71 @@
+export component ScrollBox inherits TouchArea {
+    in-out property <length> y-scroll: 0;
+    property <bool> bottom-fading: root.height - y-scroll < rect.preferred-height;
+    property <bool> top-fading: y-scroll < 0;
+
+    Rectangle {
+        clip: true;
+
+        rect := Rectangle {
+            y: y-scroll;
+
+            animate y {
+                duration: 150ms;
+                easing: ease-in-out;
+            }
+
+            @children
+        }
+
+        Rectangle {
+            y: 0;
+            x: 0;
+            width: parent.width;
+            height: 10px;
+            background: top-fading ? @linear-gradient(180deg, #151515, transparent) : transparent;
+
+            animate background {
+                 duration: 300ms;
+                 easing: ease;
+            }
+        }
+
+        Rectangle {
+            y: parent.height - self.height;
+            x: 0;
+            width: parent.width;
+            height: 10px;
+            background: bottom-fading ? @linear-gradient(0deg, #151515, transparent) : transparent;
+
+            animate background {
+                 duration: 300ms;
+                 easing: ease;
+            }
+        }
+    }
+
+    scroll-event(event) => {
+        if (event.delta-y < 0) {
+            if (root.height - (y-scroll + event.delta-y) <= rect.preferred-height) {
+                y-scroll += event.delta-y;
+            } else {
+                if (rect.preferred-height > rect.height) {
+                    y-scroll = -rect.preferred-height + root.height;
+                } else {
+                    y-scroll = 0;
+                }
+            }
+        } else {
+            if (y-scroll + event.delta-y <= 0) {
+                y-scroll += event.delta-y;
+            } else {
+                y-scroll = 0;
+            }
+        }
+
+        top-fading = y-scroll < 0;
+        bottom-fading = root.height - y-scroll < rect.preferred-height;
+
+        return EventResult.accept;
+    }
+}

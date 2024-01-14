@@ -1,0 +1,99 @@
+import { RadioEntry } from "RadioEntry.slint";
+import { VerticalBox, ScrollView, HorizontalBox, GridBox} from "std-widgets.slint";
+import { SearchBar } from "SearchBar.slint";
+import { ScrollBox } from "ScrollBox.slint";
+import { PlaybackLine } from "PlaybackLine.slint";
+
+export struct Radio {
+    name: string,
+    url: string,
+    description: string,
+}
+
+export component RadioWindow inherits Window {
+    min-width: 800px;
+    min-height: 400px;
+    title: "Radio";
+
+    in property <[[Radio]]> radios: [
+        [
+            {name: "ILove Radio", description: "Ein Sender für Leute welche mehr so Deutschrapkram usw mögen. Ist ganz nett zu hören aber gibt besseres. Tja, rewrappt das wenn man zu viel Text schreibt?", url: "https://streams.ilovemusic.de/iloveradio1.mp3"},
+            {name: "Test", description: "Test test test", url: "https://voulter.com"},
+            {name: "Test", description: "Test test test", url: "https://voulter.com"},
+            {name: "Test", description: "Test test test", url: "https://voulter.com"},
+        ],
+        [
+            {name: "ILove Radio", description: "Ein Sender für Leute welche mehr so Deutschrapkram usw mögen. Ist ganz nett zu hören aber gibt besseres. Tja, rewrappt das wenn man zu viel Text schreibt?", url: "https://voulter.com"},
+            {name: "Test", description: "Test test test", url: "https://voulter.com"},
+            {name: "Test", description: "Test test test", url: "https://voulter.com"},
+            {name: "Test", description: "Test test test", url: "https://voulter.com"},
+        ],
+    ];
+
+    callback selected-changed();
+    callback pause-continue();
+    callback searchbar-used();
+    out property <string> search;
+    in-out property <Radio> selected: radios[0][0];
+    in-out property <bool> playing: false;
+
+    background: #151515;
+
+    VerticalLayout {
+        alignment: stretch;
+
+        VerticalLayout {
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            SearchBar {
+                edited => {
+                    root.search = self.text;
+                    searchbar-used();
+                }
+            }
+
+            ScrollBox {
+                Rectangle {
+                    VerticalLayout {
+                        for radio-row in radios: HorizontalLayout {
+                            padding-top: 10px;
+
+                            Rectangle {
+                                border-radius: 5px;
+                                clip: true;
+
+                                HorizontalLayout {
+                                    for radio in radio-row: RadioEntry {
+                                        width: 25%;
+                                        title: radio.name;
+                                        url: radio.url;
+                                        on-play => {
+                                            selected = radio;
+                                            selected-changed();
+                                            if (!playing) {
+                                                playing = true;
+                                                pl.playing = true;
+                                                pause-continue();
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        pl := PlaybackLine {
+            title: selected.name;
+            description: selected.description;
+            playing: root.playing;
+            pause-continue => {
+                playing = self.playing;
+                pause-continue();
+            }
+        }
+    }
+}

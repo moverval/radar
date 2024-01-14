@@ -1,0 +1,68 @@
+import { VerticalBox , HorizontalBox} from "std-widgets.slint";
+export component PlaybackLine inherits VerticalLayout {
+    callback pause-continue;
+    in property <string> title;
+    in property <string> description;
+    in-out property <bool> playing: true;
+
+    VerticalLayout {
+        HorizontalLayout {
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+
+            VerticalLayout {
+                alignment: center;
+                padding-right: 20px;
+
+                Rectangle {
+                    width: 40px;
+                    height: 40px;
+
+                    border-radius: self.width;
+                    background: ta.has-hover ? #D0D0D0 : white;
+
+                    animate background {
+                        easing: ease;
+                        duration: 200ms;
+                    }
+
+                    drop-shadow-blur: 10px;
+                    drop-shadow-color: black;
+                    drop-shadow-offset-x: 2px;
+                    drop-shadow-offset-y: 2px;
+
+                    ta := TouchArea {
+                        mouse-cursor: pointer;
+
+                        clicked => {
+                            playing = !playing;
+                            pause-continue();
+                        }
+
+                        Image {
+                            source: playing ? @image-url("icons/stop.svg") : @image-url("icons/play.svg");
+                        }
+                    }
+                }
+            }
+
+            VerticalLayout {
+                Text {
+                    font-family: "Arial";
+                    font-size: 20px;
+                    text: title;
+                    vertical-alignment: center;
+                    height: 30px;
+                }
+
+                Text {
+                    text: description;
+                    wrap: word-wrap;
+                }
+            }
+        }
+    }
+
+}

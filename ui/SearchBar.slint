@@ -1,0 +1,22 @@
+export component SearchBar inherits Rectangle {
+    background: #404040;
+    height: 40px;
+    border-radius: 5px;
+    out property <string> text;
+    callback edited;
+
+    VerticalLayout {
+        padding: 10px;
+
+        TextInput {
+            font-family: "Arial";
+            font-size: 20px;
+            vertical-alignment: center;
+
+            edited => {
+                root.text = self.text;
+                edited();
+            }
+        }
+    }
+}
