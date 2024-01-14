@@ -6,8 +6,8 @@ fn main() -> Result<(), Error> {
     if cfg!(target_os = "windows") {
         let mut res = winres::WindowsResource::new();
         res.set_icon("ui/icons/radio-solid.ico")
-            .set("OriginalFilename", "radio.exe")
-            .set("InternalName", "radio.exe");
+            .set("OriginalFilename", "radar.exe")
+            .set("InternalName", "radar.exe");
 
         res.compile()?;
     }
